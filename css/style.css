@@ -37,12 +37,18 @@ body {
 	border: 6px solid #F5F5F5;
 	border: 3px solid #EBEBEC;
 	border: 1px solid #333333;
-	z-index: 11;	
+	position: absolute;
+	z-index: 35;	
+	margin-left: 21.5em;
+	margin-top: -3em;
 }
 
 .main-input {
+	margin-top: 8.5em;
 	margin-left: 5em;
-	z-index: 99;
+	position: absolute;
+	z-index: 20;
+	border: 1px solid #e9e2e2;
 }
 
 .form-wrapper {
@@ -51,7 +57,10 @@ body {
 
 .checkbox, .textbox {
 	display: inline-block;
-	z-index: 99;
+	position: relative;
+	z-index: 30;
+	border: 1px solid #e9e2e2;
+	margin-top: 13em;
 }
 
 
