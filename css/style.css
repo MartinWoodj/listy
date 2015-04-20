@@ -39,7 +39,7 @@ body {
 	border: 1px solid #333333;
 	position: absolute;
 	z-index: 35;	
-	margin-left: 21.5em;
+	margin-left: 12em;
 	margin-top: -3em;
 }
 
@@ -55,7 +55,7 @@ body {
 	padding: 2em;
 }
 
-.checkbox, .textbox {
+.checkbox, .textbox, #list {
 	display: inline-block;
 	position: relative;
 	z-index: 30;
