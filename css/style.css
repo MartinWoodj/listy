@@ -1,8 +1,7 @@
-
-
 body {
 	background: -webkit-gradient(linear, left top, left bottom, from(#f0e6cc), to(#348698)) fixed;
 	background: -webkit-gradient(linear, left top, left bottom, from rgba(255,255,255,0.50)), to(#135C8A) fixed;
+	font-family: 'Raleway', sans-serif;
 }
 
 .list-bg {
@@ -56,11 +55,13 @@ body {
 }
 
 #list {
+	font-family: 'Raleway';
+	font-weight: 500;
 	display: inline-block;
 	position: relative;
 	z-index: 30;
-	border: 1px solid #e9e2e2;
 	margin-top: 13em;
+	margin-left: 2.5em;
 }
 
 li {
@@ -71,9 +72,15 @@ input[type="checkbox"] {
 	margin-right: 6px;
 }
 
+hr {
+	width: 70%;
+	opacity: 0.4;
+}
 
-
-
+.checked {
+	text-decoration: line-through;
+	opacity: 0.2;
+}
 
 
 
