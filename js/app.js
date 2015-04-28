@@ -7,16 +7,16 @@ $(document).ready(function(){
 			$('#item').val('');
 				console.log("You pressed enter!");
 			$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
-			$('.listItem input').change(function(){
-				if (this.checked){
-        	$('#list').click(function() {
-				console.log("Checkbox checked!");
-			$(".listItem").removeClass("listItem").addClass("checked");
-// 			$('#list').prepend('<li class="checked" />');
-        	});
-    	};
-	});
-
+			$('input[type="checkbox"]').click(function(){
+            if($(this).is(":checked")){
+                console.log("Checkbox is checked.");
+                $(".listItem").removeClass("listItem").addClass("checked");
+            	}
+            else if($(this).is(":not(:checked)")){
+                console.log("Checkbox is unchecked.");
+                $(".checked").removeClass("checked").addClass("listItem");
+            	}
+			});
 		};
 
 	});
@@ -38,37 +38,11 @@ $(document).ready(function(){
 - *Figure out how to permanently remove an item from the list
   
   
-  $('#list').change(function(){
-    if (this.checked){
-        $('#list').click(function() {
-           doSomething();
-        });
-    } else {
-        $('#additional_foreign').addClass('btn_disable');
-    }   
-});
-  
-  
-	$('.listItem input').change(function(){
-    	if (this.checked){
-        	$('#list').click(function() {
-				console.log("Checkbox checked!");
-        	});
-    	};
-	});
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  		if($('.listItem input' ).prop('checked') == true) {
-			console.log("Checkmark clicked!");
-// 			('#list').prepend('<li class="checked">');
-		};
+
+
+
+
+
   
     
 */

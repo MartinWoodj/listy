@@ -82,7 +82,10 @@ hr {
 	opacity: 0.2;
 }
 
-
+.listItem {
+	text-decoration: none;
+	opacity: 1;
+}
 
 
 
