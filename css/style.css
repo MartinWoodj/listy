@@ -64,6 +64,16 @@ body {
 	margin-left: 2.5em;
 }
 
+#itemDone {
+	font-family: 'Raleway';
+	font-weight: 500;
+	display: inline-block;
+	position: relative;
+	z-index: 30;
+	margin-left: 2.5em;
+}
+
+
 li {
 	list-style-type: none;
 }
