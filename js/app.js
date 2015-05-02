@@ -13,16 +13,28 @@ $(document).ready(function(){
 		};	
 	});
 	
-	$('#list').on('click','input[type="checkbox"]',function(){
+	$('#add').submit(function(e){
+		if(event.keyCode == 13) {
+			inputItem = $('#item').val();
+		
+			$('#item').val('');
+			console.log("You pressed enter!");
+			
+			$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
+		};	
+	});
+	
+	$('#list, #itemDone').on('click','input[type="checkbox"]',function(){
             if($(this).is(":checked")){
                 console.log("Checkbox is checked.");
-//                 $(".listItem").removeClass("listItem").addClass("checked");
 				$(this).closest('li').removeClass("listItem").addClass("checked");
+				$('.checked').appendTo($("#itemDone"));
             }
             
             else if($(this).is(":not(:checked)")){
                 console.log("Checkbox is unchecked.");
                 $(this).closest('li').removeClass("checked").addClass("listItem");
+                $('.listItem').appendTo($("#list"));
             }
 	});
 		
@@ -41,15 +53,6 @@ $(document).ready(function(){
 - List item that is completed with a strike through and a checkmark is also greyed out
 - Unchecking a checked item moves the list item back to the top of the list
 - *Figure out how to permanently remove an item from the list
-  
-  
-
-$('#itemDone').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
-
-
-
-  
-    
 */
 
 
