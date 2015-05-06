@@ -9,20 +9,19 @@ $(document).ready(function(){
 			$('#item').val('');
 			console.log("You pressed enter!");
 			
-			$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
+// 			$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
 		};	
 	});
 	
-	$('#add').submit(function(e){
-		if(event.keyCode == 13) {
-			inputItem = $('#item').val();
+	$( "#submit_btn" ).submit(function(e) {
+		inputItem = $('#item').val();
+		console.log("Submit button pressed!");
+		event.preventDefault();
+	$('#item').val('');
+	$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
 		
-			$('#item').val('');
-			console.log("You pressed enter!");
-			
-			$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
-		};	
 	});
+	
 	
 	$('#list, #itemDone').on('click','input[type="checkbox"]',function(){
             if($(this).is(":checked")){
@@ -33,7 +32,7 @@ $(document).ready(function(){
             
             else if($(this).is(":not(:checked)")){
                 console.log("Checkbox is unchecked.");
-                $(this).closest('li').removeClass("checked").addClass("listItem");
+                $(this).closest('li').removeClass("checked").addClass("listItem").prependTo($("#list"));
                 $('.listItem').appendTo($("#list"));
             }
 	});
