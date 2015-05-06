@@ -1,60 +1,33 @@
-$(document).ready(function(){
-	
-	// Enter key adds items
-	
+$(document).ready(function(){	
 	$('#item').keyup(function(e){
 		if(event.keyCode == 13) {
-			inputItem = $('#item').val();
-		
+			inputItem = $('#item').val();		
 			$('#item').val('');
-			console.log("You pressed enter!");
-			
-// 			$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
 		};	
 	});
 	
 	$( "#submit_btn" ).submit(function(e) {
 		inputItem = $('#item').val();
-		console.log("Submit button pressed!");
 		event.preventDefault();
-	$('#item').val('');
-	$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '</li>');
-		
+		$('#item').val('');
+		$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '<img class="trashCan" src="images/trash.svg" width="13" height="16"></li>');
 	});
 	
 	
 	$('#list, #itemDone').on('click','input[type="checkbox"]',function(){
             if($(this).is(":checked")){
-                console.log("Checkbox is checked.");
 				$(this).closest('li').removeClass("listItem").addClass("checked");
 				$('.checked').appendTo($("#itemDone"));
             }
             
             else if($(this).is(":not(:checked)")){
-                console.log("Checkbox is unchecked.");
                 $(this).closest('li').removeClass("checked").addClass("listItem").prependTo($("#list"));
                 $('.listItem').appendTo($("#list"));
             }
 	});
-		
 	
+	$('#list, #itemDone').on("click", "img", function(e){
+		$(this).closest('li').remove();
+	});	
+
 });
-
-
-
-
-/*
-- Type new item into text box - DONE
-- Hit "enter" for item to be added to list - DONE
-- List item will display with checkbox left of item - DONE
-- Clicking inside checkbox will strike through item - DONE
-- Strike through item will then be dropped to the bottom of the list
-- List item that is completed with a strike through and a checkmark is also greyed out
-- Unchecking a checked item moves the list item back to the top of the list
-- *Figure out how to permanently remove an item from the list
-*/
-
-
-
-
-

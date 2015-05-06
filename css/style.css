@@ -71,6 +71,7 @@ body {
 	position: relative;
 	z-index: 30;
 	margin-left: 2.5em;
+	width: 22em;
 }
 
 
@@ -95,11 +96,10 @@ hr {
 .listItem {
 	text-decoration: none;
 	opacity: 1;
+	width: 22em;
+/* 	border: 1px solid fuchsia; */
 }
 
-
-
-
-
-
-
+.trashCan {
+	float: right;
+}
