@@ -29,25 +29,37 @@ body {
 }
 
 .logo {
-	height: 6.875em;
-	width: 6.875em;
-	border-radius: 75%;
-	background: #5C717F;
-	border: 6px solid #F5F5F5;
-	border: 3px solid #EBEBEC;
-	border: 1px solid #333333;
 	position: absolute;
-	z-index: 35;	
+	z-index: 35;
 	margin-left: 12em;
-	margin-top: -3em;
+	margin-top: -3.688em;
+}
+
+.title {
+	font-family: 'Tangerine';
+	font-weight: 700;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 1.250em;
+	z-index: 11;
+}
+
+.tagline {
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 1em;
+	text-align: center;
+	z-index: 11;
+	margin-top: -1.688em;
 }
 
 .main-input {
-	margin-top: 8.5em;
+	margin-top: 9.0em;
 	margin-left: 5em;
 	position: absolute;
 	z-index: 20;
 	border: 1px solid #e9e2e2;
+	border-radius: 5px;
 }
 
 .form-wrapper {
