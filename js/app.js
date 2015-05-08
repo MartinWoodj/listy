@@ -1,6 +1,6 @@
 $(document).ready(function(){	
 	$('#item').keyup(function(e){
-		if(event.keyCode == 13) {
+		if(e.keyCode == 13) {
 			inputItem = $('#item').val();		
 			$('#item').val('');
 		};	
@@ -8,7 +8,7 @@ $(document).ready(function(){
 	
 	$( "#submit_btn" ).submit(function(e) {
 		inputItem = $('#item').val();
-		event.preventDefault();
+		e.preventDefault();
 		$('#item').val('');
 		$('#list').prepend('<li class="listItem"><input type="checkbox" />' + inputItem + '<img class="trashCan" src="images/trash.svg" width="13" height="16"></li>');
 	});
